@@ -21,7 +21,7 @@ void PrintArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"{array[i, j]} ");;
+            Console.Write($"{array[i, j]} ");
         }
         Console.WriteLine();
     }  
@@ -55,3 +55,6 @@ PrintArray(randomArray2);
 Console.WriteLine("Массив произведения двух матриц:");
 int[,] productTwoMatrices = GetProductTwoMatrices(randomArray1, randomArray2);
 PrintArray(productTwoMatrices);
+
+
+
