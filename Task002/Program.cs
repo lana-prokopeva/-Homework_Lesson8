@@ -32,9 +32,8 @@ void PrintArray(int[,] array)
 
 void GetRowMinSumElements(int[,] array)
 {
-    Console.WriteLine("Масcив сумм:");
-    int size = array.GetLength(0);
-    int[] sumArray = new int [size];
+    Console.WriteLine("Масcив сумм строк:");
+    int[] sumArray = new int [array.GetLength(0)];
     for (int i = 0; i < array.GetLength(0); i++)
     {
         int sum = 0;
@@ -46,25 +45,18 @@ void GetRowMinSumElements(int[,] array)
         Console.Write($"{sumArray[i]} ");
     }
 
+    int minRow = 0;
     int minSum = sumArray[0];
     for (int i = 0; i < sumArray.Length; i++)
     {
         if (sumArray[i] < minSum)
         {
             minSum = sumArray[i];
+            minRow = i;
         }  
     }
-
-    int rowMin = 0;
-    for (int i = 0; i < sumArray.Length; i++)
-    {
-        if (minSum == sumArray[i] )
-        {
-            Console.WriteLine();
-            Console.Write($"Строка {i+1} имеет наименьшую сумму элементов");
-        }  
-    }      
-    
+    Console.WriteLine();
+    Console.Write($"Строка {minRow + 1} имеет наименьшую сумму элементов");        
 }
 
 int[,] array = new int[3, 10];
