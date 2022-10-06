@@ -27,6 +27,7 @@ void PrintArray(int[,] array)
         Console.WriteLine();
     }  
 }
+
 // Метод упорядочивания строк по убыванию
 int[,] GetRowInDescendingOrder(int[,] array)
 {
