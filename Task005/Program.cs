@@ -14,7 +14,7 @@ int[,] GetArraySpiral(int[,] array)
         if (i <= j + 1 && i + j < array.GetLength(1) - 1) j++;
         else if (i < j && i + j >= array.GetLength(0) - 1) i++;
         else if (i >= j && i + j > array.GetLength(1) - 1) j--;
-        else i--;
+        else i--; // else if (i > j && i + j <= array.GetLength(0) - 1) i--;
     }
     return array;
 }
